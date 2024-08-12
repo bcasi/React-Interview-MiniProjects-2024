@@ -15,19 +15,22 @@ function App() {
 
     getWeather(searchCity)
       .then((res) => {
-        const { current } = res;
-        const {
-          wind_kph,
-          humidity: Humidity,
-          temp_c: Temperature,
-          condition,
-        } = current;
-        const { text: Condition } = condition;
-        setWeatherData({ Temperature, Humidity, Condition, wind_kph });
+        if (res) {
+          const { current } = res;
+          const {
+            wind_kph,
+            humidity: Humidity,
+            temp_c: Temperature,
+            condition,
+          } = current;
+          const { text: Condition } = condition;
+          setWeatherData({ Temperature, Humidity, Condition, wind_kph });
+          setLoading(false);
+        }
         setLoading(false);
       })
       .catch((e) => {
-        console.error(e);
+        console.error;
         setLoading(false);
       });
   }
