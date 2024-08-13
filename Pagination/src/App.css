@@ -1,0 +1,20 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100vw;
+  /* height: 100vh; */
+}
+
+.table-container {
+  width: 99%;
+  margin: 15px 2px;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
